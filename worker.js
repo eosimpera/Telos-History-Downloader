@@ -11,7 +11,7 @@ function convertArrayOfObjectsToCSV(args) {
   result += '"' + keys.join('","') + '"' + "\n\r";
   data.forEach(function(item) {
     var lines = [];
-    keys.forEach(function(key) {
+    keys.forEach(functiohttps://api.eos.miami/v1/history/get_actions/n(key) {
       lines.push(item[key]);
     });
     result += '"' + lines.join('","') + '"' + "\n\r";
@@ -25,7 +25,7 @@ self.onmessage = function(msg) {
   const account = msg.data.account;
   const numbertransactions = msg.data.numbertransactions
   const Http = new XMLHttpRequest();
-  var link = "https://eos.miami.com/v1/history/get_actions/" + account + "?skip=0&limit=" + numbertransactions;
+  var link = "" + account + "?skip=0&limit=" + numbertransactions;
   Http.open("GET", link);
   Http.send();
   Http.onreadystatechange = (e) => {
