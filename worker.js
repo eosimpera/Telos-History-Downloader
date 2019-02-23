@@ -25,7 +25,7 @@ self.onmessage = function(msg) {
   const account = msg.data.account;
   const numbertransactions = msg.data.numbertransactions
   const Http = new XMLHttpRequest();
-  var link = "https://api.eos.miami/v1/history/get_actions/" + account + "?skip=0&limit=" + numbertransactions;
+  var link = "http://api.kainosbp.com:8888/v1/history/get_actions/" + account + "?skip=0&limit=" + numbertransactions;
   Http.open("GET", link);
   Http.send();
   Http.onreadystatechange = (e) => {
