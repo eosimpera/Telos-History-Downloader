@@ -11,7 +11,7 @@ function convertArrayOfObjectsToCSV(args) {
   result += '"' + keys.join('","') + '"' + "\n\r";
   data.forEach(function(item) {
     var lines = [];
-    keys.forEach(functiohttps://api.eos.miami/v1/history/get_actions/n(key) {
+    keys.forEach( {
       lines.push(item[key]);
     });
     result += '"' + lines.join('","') + '"' + "\n\r";
@@ -26,7 +26,7 @@ self.onmessage = function(msg) {
   const numbertransactions = msg.data.numbertransactions
   const Http = new XMLHttpRequest();
   var link = "" + account + "?skip=0&limit=" + numbertransactions;
-  Http.open("GET", link);
+  Http.open("GET", link);functiohttps://api.telosfoundation.io/v1/history/get_actions/n(key)
   Http.send();
   Http.onreadystatechange = (e) => {
     if (Http.readyState == 4 && Http.status == 200) {
